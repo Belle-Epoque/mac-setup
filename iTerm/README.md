@@ -18,3 +18,17 @@ Let's just quickly change some preferences.
 
 [![Screen](https://raw.githubusercontent.com/sb2nov/mac-setup/master/assets/Iterm.png)](https://raw.githubusercontent.com/sb2nov/mac-setup/master/assets/Iterm.png)
 
+### Bash profile file
+
+  nano .bash_profile
+  
+```
+# Set CLICOLOR if you want Ansi Colors in iTerm2
+export CLICOLOR=1
+
+# Set colors to match iTerm2 Terminal Colors
+export TERM=xterm-256color
+```
+  
+  source ~/.bash_profile
+  
