@@ -37,3 +37,26 @@ To upgrade all or a particular package:
 To uninstall a package:
 
     $ npm uninstall <package>
+    
+
+### Fix bug with node/npm install
+
+    $ brew update
+    $ brew doctor
+    
+Try to create symlink
+
+    $ brew link --overwrite node
+
+You have to fix permission access
+
+    $ sudo chown -R $USER /usr/local/etc
+    $ sudo chown -R $USER /usr/local/lib
+    $ sudo chown -R $USER /usr/local/share
+    $ sudo chown -R $USER /usr/local
+    
+Reinstall node
+
+    $ export PATH="/usr/local/bin:$PATH"
+    $ brew install node
+    $ brew postinstall node
